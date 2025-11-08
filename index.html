@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qqrze - Bio</title>
+    <meta name="description" content="Personal bio page of qqrze - Developer and creative mind from Russia">
+    <meta name="keywords" content="qqrze, developer, bio, portfolio, discord, github">
+    <meta name="author" content="qqrze">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/svg+xml" href="img/avatar.svg">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loading-text">
+                <span>L</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span>
+                <span class="dots">
+                    <span>.</span><span>.</span><span>.</span>
+                </span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="bg-gradient" class="bg-animated"></div>
+    
+    <div class="vignette"></div>
+    
+    <audio id="music" loop>
+        <source src="aud/music.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="click-sound">
+        <source src="aud/click.wav" type="audio/wav">
+    </audio>
+    
+    <audio id="hover-sound">
+        <source src="aud/hover.wav" type="audio/wav">
+    </audio>
+    
+    <audio id="scroll-sound">
+        <source src="aud/scroll.wav" type="audio/wav">
+    </audio>
+
+    <div id="main-content" class="hidden">
+        <div class="time-display">
+            <div id="current-time"></div>
+        </div>
+        
+        <div class="profile-container">
+            <div class="profile-card">
+                <div class="avatar-container">
+                    <img src="img/avatar.svg" alt="Avatar of qqrze" class="avatar" role="img" aria-label="Profile picture of qqrze">
+                    <div class="avatar-glow"></div>
+                </div>
+                
+                <div class="banner">
+                    <img src="img/banner.svg" alt="Banner" class="banner-img">
+                </div>
+                
+                <div class="profile-info">
+                    <h1 class="username">qqrze</h1>
+                    <div class="status-indicator">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Online</span>
+                    </div>
+                    <p class="location">
+                        <span class="location-icon">📍</span>
+                        Russia
+                    </p>
+                </div>
+                
+                <div class="social-links" role="navigation" aria-label="Social media links">
+                    <a href="https://discord.gg/1413802676776337469" class="social-button discord" target="_blank" rel="noopener noreferrer" aria-label="Join my Discord server">
+                        <span class="social-icon" aria-hidden="true">💬</span>
+                        <span class="social-text">Discord</span>
+                    </a>
+                    <a href="https://t.me/qqrze" class="social-button telegram" target="_blank" rel="noopener noreferrer" aria-label="Message me on Telegram">
+                        <span class="social-icon" aria-hidden="true">📱</span>
+                        <span class="social-text">Telegram</span>
+                    </a>
+                    <a href="https://github.com/qqrze" class="social-button github" target="_blank" rel="noopener noreferrer" aria-label="Check out my GitHub profile">
+                        <span class="social-icon" aria-hidden="true">💻</span>
+                        <span class="social-text">GitHub</span>
+                    </a>
+                </div>
+                
+                <div class="quote">
+                    "В темноте всегда есть свет"
+                </div>
+            </div>
+        </div>
+        
+        <div class="music-player" role="region" aria-label="Music player">
+            <div class="music-controls">
+                <button id="play-pause" class="control-btn" aria-label="Toggle background music" aria-pressed="false">▶️</button>
+                <span class="music-title">Background Music</span>
+            </div>
+        </div>
+    </div>
+    
+    <canvas id="particles"></canvas>
+    
+    <script src="script.js"></script>
+    <script src="lanyard-integration.js"></script>
+</body>
+</html>
